@@ -3,6 +3,15 @@
 
 {% block body %}
 <nav><a href="{{ path('app_locality') }}">Retour à l'index</a></nav>
-    <h1>{{ localitie.postalcode }} {{ localitie.locality }}</h1>
+   <h1>{{ localitie.postalCode }} {{ localitie.locality|capitalize }}</h1> 
+    
+    <ul>
+
+    {% for location in localitie.locations %} 
+ 
+        <li>{{ location.designation }}</li>
+    {% endfor %}
+    </ul>
+
 	   
 {% endblock %}
