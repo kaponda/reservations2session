@@ -18,11 +18,11 @@ security:
         main:
             pattern: ^/
             anonymous: true
-            logout:
-                path: form_connection_logout
-            guard:
-                authenticators:
-                    - App\Security\FormLoginAuthenticator
+            #logout:
+                #path: form_connection_logout
+            #guard:
+                #authenticators:
+                    #- App\Security\FormLoginAuthenticator
         #access_control:
                 #- { path: '^/admin', roles: ROLE_ADMIN }
             # activate different ways to authenticate
